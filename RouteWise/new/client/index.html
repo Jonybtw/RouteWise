@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteWise</title>
+    <link rel="icon" href="css/mapIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <header>
+        <a href="/new/client/" style="text-decoration: none; font-size: 2.5rem;"id="logo"><span>Route</span>Wise</a>
+        <section>
+            <a href="pages/auth/login.html" class="btn btn-primary" id="loginBtn"><i class="bi bi-box-arrow-in-right"></i> Iniciar Sessão</a>
+            <a href="pages/auth/register.html" class="btn btn-primary" id="registerBtn"><i class="bi bi-person-fill-add"></i> Registar Conta</a>
+            <a href="pages/content/profile.html" class="btn btn-primary" id="perfilBtn" style="display: none;"><i class="bi bi-person-fill"></i> Perfil</a>
+            <a href="pages/content/routes.html" class="btn btn-primary" id="routesBtn" style="display: none;"><i class="bi bi-geo-alt-fill"></i> Mapa</a>
+        </section>
+    </header>
+
+    <main>
+        <div class="slogan">
+            <h1 class="title">Route<span class="wise">Wise</span></h1>
+        <p class="tagline">Navegue com <span class="blue">Inteligência</span>, Navegue com <span class="blue">Eficiência</span></p>
+        </div>
+        <section class="proposta-de-valor">
+            <h2>Por que escolher o RouteWise?</h2>
+            <div class="pontos-de-valor">
+                <div class="ponto">
+                    <h3>Informações de Trânsito em Tempo Real</h3>
+                    <p>Encontre as rotas mais rápidas para o seu destino.</p>
+                </div>
+                <div class="ponto">
+                    <h3>Recomendações Personalizadas</h3>
+                    <p>Obtenha rotas personalizadas para suas preferências.</p>
+                </div>
+                <div class="ponto">
+                    <h3>Navegação Ecológica</h3>
+                    <p>Escolha rotas eficientes em combustível e reduza a sua pegada de carbono.</p>
+                </div>
+                </div>
+        </section>
+
+        <section class="chamada-para-acao">
+            <div class="container"> 
+                <h2>Pronto para uma Navegação Mais Inteligente?</h2>
+                <p>Crie sua conta gratuita agora e descubra como o RouteWise pode transformar a maneira como te locomoves.</p>
+                <a href="pages/auth/register.html" class="botao-cta">Criar Conta Grátis</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <h1 id="logo"><span>Route</span>Wise</h1>
+        <p>&copy; <span id="year"></span> RouteWise. Todos os direitos reservados.</p>
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear;
+        </script>
+        <span>Navegue com <span id="mark">Inteligência</span>, Navegue com <span id="mark">Eficiência</span></span>
+        <nav>
+            <a href="pages/content/sobrenos.html">Sobre Nós</a>
+            <a href="pages/content/contacto.html">Contactos</a>
+        </nav>
+    </footer>
+    <script src="js/login.js""></script>
+    <script src="js/mainColor.js"></script>
+</body>
+
+</html>
