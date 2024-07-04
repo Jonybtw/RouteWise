@@ -1,6 +1,44 @@
 ## Overview
 
-**RouteWise** is a web application inspired by Google Maps
+**RouteWise** is a web application inspired by Google Maps with these features:
+- User authentication and authorization system
+- Creation and management of user profiles
+- Route search and planning
+- Saving routes
+- Sending password reset emails
+
+## Screenshots
+### Login Page Preview
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/cb75165f-9e5e-4bbd-b6df-ae6fbb3ec25e)
+### Sign up Page Preview
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/00c4cbea-8a31-4356-b610-3fc1309e7ad4)
+
+### Main Page Preview
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/2f328ba7-6291-474f-8cd3-53951fa8489a)
+
+### User Profile
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/43cecdec-eb77-4cac-ab88-9f3d4f95144a)
+
+### Routes Page
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/3b50c35c-ecf6-46e1-9625-2aab795b1bcd)
+### Route Details + Saved Routes
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/2f655c2f-cde5-4b13-82c6-0fa99d38594f)
+![image](https://github.com/Jonybtw/RouteWise/assets/84144569/6efff2bc-1605-4534-8665-a5461ca99868)
+
+### Programming Languages:
+- Node.js
+- HTML
+- CSS
+- JavaScript
+
+### Node.js Libraries:
+- BCrypt (Password hashing)
+- CryptoJS (General cryptography)
+- JWT (Authentication and authorization)
+- Nodemailer (Email sending)
+
+### Frameworks:
+- Bootstrap
 
 This guide will help you set up and start the project. Follow the steps below to configure and run both the server and client parts of the application.
 
@@ -28,21 +66,6 @@ Before starting, ensure you have the following:
 - `data.users`
 - `data.routes`
 
-### Nodemailer Setup
-
-For email functionality, configure `user.mjs`. Below is an example setup using [Ethereal](https://ethereal.email/). Replace the credentials with your actual email service credentials when deploying.
-
-```javascript
-const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
-  auth: {
-    user: 'email@ethereal.email',
-    pass: 'password'
-  }
-});
-```
-
 ## Configuration
 
 ### Change the Google Maps API in `routes.html`
@@ -67,6 +90,21 @@ function getLocationFromIP() {
       "https://api.ipgeolocation.io/ipgeo?apiKey=YOUR_KEY_HERE"
     );
 }
+```
+
+### Nodemailer Setup
+
+For email functionality, configure the `nodemailer` setup. Below is an example setup using an [Ethereal](https://ethereal.email/) email account. Replace the credentials with your actual email service credentials when deploying.
+
+```javascript
+const transporter = nodemailer.createTransport({
+  host: 'smtp.ethereal.email',
+  port: 587,
+  auth: {
+    user: 'email@ethereal.email',
+    pass: 'password'
+  }
+});
 ```
 
 ### Setup the `.env` File
